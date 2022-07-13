@@ -101,7 +101,7 @@ function keyPressed(){
 }
 
 async function getBackgroundImg(){
-    var response = await fetch("https://worldtimeapi.org/api/timezone/America/sao_paulo");
+    var response = await fetch("//worldtimeapi.org/api/timezone/America/sao_paulo");
     var responseJSON = await response.json();
 
     var datetime = responseJSON.datetime;
