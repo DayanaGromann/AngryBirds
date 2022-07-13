@@ -13,7 +13,9 @@ var bg = "sprites/bg1.png";
 var score = 0;
 
 function preload() {
-    getBackgroundImg();
+    
+    backgroundImg = loadImage("sprites/bg1.png");
+    //getBackgroundImg();
 }
 
 function setup(){
@@ -100,8 +102,12 @@ function keyPressed(){
     }
 }
 
+/*
+
+//O google chrome bloqueia a requisição desta API, pois ela não é https
+
 async function getBackgroundImg(){
-    var response = await fetch("//worldtimeapi.org/api/timezone/America/sao_paulo");
+    var response = await fetch("http://worldtimeapi.org/api/timezone/America/sao_paulo");
     var responseJSON = await response.json();
 
     var datetime = responseJSON.datetime;
@@ -117,3 +123,4 @@ async function getBackgroundImg(){
     backgroundImg = loadImage(bg);
     
 }
+*/
