@@ -14,7 +14,7 @@ var score = 0;
 
 function preload() {
     
-    backgroundImg = loadImage("sprites/bg1.png");
+    backgroundImg = loadImage("sprites/bg.png");
     //getBackgroundImg();
 }
 
@@ -113,11 +113,11 @@ async function getBackgroundImg(){
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11,13);
     
-    if(hour>=0600 && hour<=1900){
-        bg = "sprites/bg1.png";
+    if(hour>=06 && hour<=19){
+        bg = "sprites/bg.png";
     }
     else{
-        bg = "sprites/bg2.jpg";
+        bg = "sprites/bg1.jpg";
     }
 
     backgroundImg = loadImage(bg);
